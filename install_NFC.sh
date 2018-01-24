@@ -21,12 +21,12 @@ rm -rf $ANDROID_BUILD_TOP/frameworks/base/nxp-nfc-gsma
 
 echo
 echo "- copying required files"
-mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NFC_NCIHAL_base/core/java/android/nfc $ANDROID_BUILD_TOP/frameworks/base/core/java/android/
-mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NFC_NCIHAL_base/core/java/com/nxp $ANDROID_BUILD_TOP/frameworks/base/core/java/com/
-mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NFC_NCIHAL_base/core/java/com/vzw $ANDROID_BUILD_TOP/frameworks/base/core/java/com/
-mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NFC_NCIHAL_base/nxp-nfc-gsma $ANDROID_BUILD_TOP/frameworks/base/
-rm -rf $ANDROID_BUILD_TOP/NxpNfcAndroid/NFC_NCIHAL_base
-rm -rf $ANDROID_BUILD_TOP/NxpNfcAndroid/NXPNFC_Reference
+mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base/core/java/android/nfc $ANDROID_BUILD_TOP/frameworks/base/core/java/android/
+mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base/core/java/com/nxp $ANDROID_BUILD_TOP/frameworks/base/core/java/com/
+mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base/core/java/com/vzw $ANDROID_BUILD_TOP/frameworks/base/core/java/com/
+mv $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base/nxp-nfc-gsma $ANDROID_BUILD_TOP/frameworks/base/
+rm -rf $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Base
+rm -rf $ANDROID_BUILD_TOP/NxpNfcAndroid/NfcAndroid_Vendor
 
 echo
 echo "- patching required files"
@@ -60,7 +60,7 @@ if [ "$1" = "PN7120" ]; then
   echo "- retrieving specific PN7120 configuration"
   cp $ANDROID_BUILD_TOP/NxpNfcAndroid/conf/PN7120/*.conf $ANDROID_BUILD_TOP/NxpNfcAndroid/conf/
 else
-  echo "- retrieving specific PN7120 configuration"
+  echo "- retrieving specific PN7150 configuration"
   cp $ANDROID_BUILD_TOP/NxpNfcAndroid/conf/PN7150/*.conf $ANDROID_BUILD_TOP/NxpNfcAndroid/conf/
 fi
 
